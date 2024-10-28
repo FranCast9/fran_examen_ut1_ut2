@@ -15,6 +15,12 @@
             <ul>
                 @foreach($messages as $message)
                     <li>{{ $message->text }}</li>
+                    <li> 
+                        <select name="subrayado" id="subrayado">
+                            <option value="Si"> <u> {{ $message->text }} </u> </option>
+                            <option value="No"> {{ $message->text }} </option>
+                        </select> 
+                    </li>
                 @endforeach
             </ul>
         @endif
